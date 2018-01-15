@@ -4,7 +4,7 @@
 #include "tcp_acceptor.h"
 
 tcp_acceptor::tcp_acceptor(int port, const char* address)
-    : m_lsd(0), m_port(port), m_address(address), m_listenting(false)
+    : m_lsd(0), m_port(port), m_address(address), m_listening(false)
 {
 }
 

@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <string>
 
-using namespace std
+using namespace std;
 
 class tcp_stream
 {
@@ -20,15 +20,15 @@ public:
 
     ~tcp_stream();
 
-    size_t send(char *buffer, size_t len);
-    size_t receive(char *buffer, size_t len);
+    ssize_t send(const char *buffer, size_t len);
+    ssize_t receive(char *buffer, size_t len, int timedout=0);
 
     string 	get_peer_ip();
     int 	get_peer_port();
 
     enum{
-	connectino_closed = 0;
-	connection_reset = -1;
+	connectino_closed = 0,
+	connection_reset = -1,
 	connection_timedout = -2
     };
 

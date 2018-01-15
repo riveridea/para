@@ -1,14 +1,14 @@
 #include <string>
 #include <netinet/in.h>
-#include "tcpstream.h"
+#include "tcp_stream.h"
  
 using namespace std;
  
 class tcp_acceptor
 {
     int    m_lsd;
-    string m_address;
     int    m_port;
+    string m_address;
     bool   m_listening;
  
   public:

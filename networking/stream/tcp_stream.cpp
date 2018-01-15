@@ -1,7 +1,7 @@
 #include <arpa/inet.h>
-#include "tcpstream.h"
+#include "tcp_stream.h"
 
-tcp_stream::tcp_stream(int sd, struct sockaddr_in *address) : msd(sd)
+tcp_stream::tcp_stream(int sd, struct sockaddr_in *address) : m_sd(sd)
 {
     char ip[50];
     inet_ntop(PF_INET, (struct in_addr*)&(address->sin_addr.s_addr),
