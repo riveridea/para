@@ -3,6 +3,8 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <fcntl.h>
+#include <stdio.h>
+#include <cerrno>
 
 int tcp_connector::resolve_host_name(const char* hostname, struct in_addr* addr)
 {
